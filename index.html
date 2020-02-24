@@ -110,12 +110,12 @@
       j++;
     }
     alert("Lucky number: " + nums[0]);
-    compare(nums[0], nums[1], nums[2], nums[3], nums[4], nums[5]);
+    document.getElementById("compare").onclick = compare(nums[0], nums[1], nums[2], nums[3], nums[4], nums[5]);
   </script>
   <form>
     <input type='text' id='numbers' display:block>
     <input type='text' id='lucky' display:block>
-    <input type='button' value="Compare to Winning Numbers" onclick="compare()">
+    <input type='button' id='compare' value="Compare to Winning Numbers">
   </form>
 </body>
 </html>
