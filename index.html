@@ -2,10 +2,10 @@
 <head>
   <title>Lottery</title>
   <script type="text/javascript">
-    function compare() {
+    function compare(nums) {
       numbers = document.getElementById("numbers").value;
       alert(numbers);
-      var nums = [0, 0, 0, 0, 0];
+      var nums2 = [0, 0, 0, 0, 0, 0];
       j = 0;
       for (i = 0; i < 5; i++) {
         num = numbers[j];
@@ -14,10 +14,78 @@
         }
         numbers[j + 1] == " " ? j += 2 : j += 3;
         nums[i] = parseInt(num);
-        alert("Number " + i + ": " + nums[i]);
       }
       lucky = parseInt(document.getElementById("lucky").value);
-      alert("Lucky Number: " + lucky);
+      
+      matches = 0;
+      for (i = 1; i < 6; i++) {
+        for (j = 1; i < 6; j++) {
+          if (nums[i] == arguments[j]) {
+            matches++;
+          }
+        }
+      }
+      
+      nums2[0] = arguments[0] ? luckyBall = 1 : luckyball = 0;
+      
+      payout(matches, luckyBall)
+    }
+            
+    function payout(matches, luckyBall) {
+      document.write("You've won ");
+      switch(luckyBall == 1) {
+          case 0;
+            matches = 5;
+            document.write("$7,000 a WEEK for LIFE!");
+            break;
+          case 1;
+            matches = 4;
+            document.write("$5,000!");
+            break;
+          case 2;
+            matches = 3;
+            document.write("$150!");
+            break;
+          case 3;
+            matches = 2;
+            document.write("$25!");
+            break;
+          case 4;
+            matches = 1;
+            document.write("$6!");
+            break;
+          case 5;
+            matches = 0;
+            document.write("$4!");
+            break;
+      }
+          
+      switch(luckyBall == 0) {
+          case 0;
+            matches = 5;
+            document.write("$25,000 a YEAR for LIFE!");
+            break;
+          case 1;
+            matches = 4;
+            document.write("$200!");
+            break;
+          case 2;
+            matches = 3;
+            document.write("$20!");
+            break;
+          case 3;
+            matches = 2;
+            document.write("$3!");
+            break;
+          case 4;
+            matches = 1;
+            document.write("Nothing! Sorry :(");
+            break;
+          case 5;
+            matches = 0;
+            document.write("$Nothing! Sorry :(");
+            break;
+      }
     }
    </script>
 </head>
@@ -41,6 +109,7 @@
       j++;
     }
     alert("Lucky number: " + nums[0]);
+    compare(nums[0], nums[1], nums[2], nums[3], nums[4], nums[5]);
   </script>
   <form>
     <input type='text' id='numbers' display:block>
