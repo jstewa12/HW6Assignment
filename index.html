@@ -15,7 +15,6 @@
         numbers[j + 1] == " " ? j += 2 : j += 3;
         nums[i] = parseInt(num);
         alert("Number " + i + ": " + nums[i]);
-        alert("Place of j: " + j);
       }
       lucky = parseInt(document.getElementById("lucky").value);
       alert("Lucky Number: " + lucky);
@@ -35,7 +34,7 @@
     nums[5] = parseInt(Math.random() * 18 + 1);
     alert("Lucky number: " + nums[5]);
     
-    bubbleSort(nums);
+    nums.sort(function(a, b){return a - b});
     j = 1;
     for (i = 0; i < 5; i++) {
       alert("Sorted Number " + j + ": " + nums[i]);
