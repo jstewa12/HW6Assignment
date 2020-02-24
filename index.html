@@ -30,17 +30,17 @@
       alert("Random Number " + j + ": " + nums[i]);
       j++;
     }  
-    
-    nums[5] = parseInt(Math.random() * 18 + 1);
-    alert("Lucky number: " + nums[5]);
+    lucky = parseInt(Math.random() * 18 + 1);
+    alert("Lucky number: " + lucky);
     
     nums.sort(function(a, b){return a - b});
+    nums[0] = lucky;
     j = 1;
-    for (i = 0; i < 5; i++) {
+    for (i = 1; i < 6; i++) {
       alert("Sorted Number " + j + ": " + nums[i]);
       j++;
     }
-    alert("Lucky number: " + nums[5]);
+    alert("Lucky number: " + nums[0]);
   </script>
   <form>
     <input type='text' id='numbers' display:block>
