@@ -4,7 +4,6 @@
   <script type="text/javascript">
     function compare(array) {
       numbers = document.getElementById("numbers").value;
-      alert(numbers);
       var nums2 = [0, 0, 0, 0, 0, 0];
       j = 0;
       for (i = 0; i < 5; i++) {
@@ -14,8 +13,10 @@
         }
         numbers[j + 1] == " " ? j += 2 : j += 3;
         nums[i] = parseInt(num);
+        alert("Entered Number " + i + ": " + nums[i]);
       }
       lucky = parseInt(document.getElementById("lucky").value);
+      alert("Entered Lucky Number: " + lucky);
       
       alert("Getting matches");
       matches = 0;
