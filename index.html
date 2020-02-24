@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>Lottery</title>
+  <script type="text/javascript">
+    function compare() {
+      numbers = document.getElementById("numbers").value;
+      alert(numbers);
+      var nums = [0, 0, 0, 0, 0];
+      j = 0;
+      for (i = 0; i < 5; i++) {
+        num = numbers[j];
+        if (numbers[j + 1] != " ") {
+          num += numbers[j + 1];
+        }
+        numbers[j + 1] == " " ? j += 2 : j += 3;
+        nums[i] = parseInt(num);
+        alert("Number " + i + ": " + nums[i]);
+        alert("Place of j: " + j);
+      }
+      lucky = parseInt(document.getElementById("lucky").value);
+      alert("Lucky Number: " + lucky);
+    }
+   </script>
+</head>
+<body>
+  <script type="text/javascript">
+    var nums = new Array();
+    nums.push(0, 0, 0, 0, 0, 0);
+    j = 1;
+    for (i = 0; i < 5; i++) {
+      nums[i] = parseInt(Math.random() * 48 + 1);
+      alert("Random Number " + j + ": " + nums[i]);
+      j++;
+    }  
+    
+    nums[5] = parseInt(Math.random() * 18 + 1);
+    alert("Lucky number: " + nums[5]);
+    
+    j = 1;
+    for (i = 0; i < 5; i++) {
+      alert("Sorted Number " + j + ": " + nums[i]);
+      j++;
+    }
+    alert("Lucky number: " + nums[5]);
+  </script>
+  <form>
+    <input type='text' id='numbers' display:block>
+    <input type='text' id='lucky' display:block>
+    <input type='button' value="Compare to Winning Numbers" onclick="compare()">
+  </form>
+</body>
+</html>
