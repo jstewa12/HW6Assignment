@@ -2,7 +2,7 @@
 <head>
   <title>Lottery</title>
   <script type="text/javascript">
-    function compare() {
+    function compare(array) {
       numbers = document.getElementById("numbers").value;
       alert(numbers);
       var nums2 = [0, 0, 0, 0, 0, 0];
@@ -114,8 +114,7 @@
   <form>
     <input type='text' id='numbers' display:block>
     <input type='text' id='lucky' display:block>
-    <input type='button' id='compare' value="Compare to Winning Numbers" 
-           onclick="compare(nums[0], nums[1], nusms[2], nums[3], nums[4], nums[5])">
+    <input type='button' id='compare' value="Compare to Winning Numbers" onclick="compare(nums)">
   </form>
 </body>
 </html>
