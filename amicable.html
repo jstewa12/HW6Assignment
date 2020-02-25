@@ -4,7 +4,24 @@
       function compare() {
         num1 = document.getElementById("number1").value;
         num2 = document.getElementById("number2").value;
-        alert("Number 1: " + num1 + "<div>Number 2: " + num2);
+        alert("Number 1: " + num1);
+        alert("Number 2: " + num2);
+        isFactor()
+      }
+      
+      function iftest1() {
+        isFactor(6, 3) = true ? alert("Correct!") : alert("Incorrect!");
+      }
+      
+      function iftest2() {
+        isFactor(5, 3) = true ? alert("Correct!") : alert("Incorrect!");
+      }
+      
+      function isFactor(num, testNum) {
+        if (num%testNum == 0) {
+          return true;
+        }
+        return false;
       }
     </script>
   </head>
@@ -13,6 +30,9 @@
       <input type='text' id='number1'>
       <input type='text' id='number2'>
       <input type='button' value="Are they amicable?" onclick="compare()">
+      <input type='button' value="isFactor Test 1" onclick="iftest1()">
+      <input type='button' value="isFactor Test 2" onclick="iftest2()">
+      prompt
     </form>
   </body>
 </html>
