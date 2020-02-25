@@ -10,18 +10,15 @@
       }
       
       function iftest1() {
-        isFactor(6, 3) = true ? alert("Correct!") : alert("Incorrect!");
+        (isFactor(6, 3) ? alert("Correct!") : alert("Incorrect!");
       }
       
       function iftest2() {
-        isFactor(5, 3) = true ? alert("Correct!") : alert("Incorrect!");
+        isFactor(5, 3) ? alert("Correct!") : alert("Incorrect!");
       }
       
       function isFactor(num, testNum) {
-        if (num%testNum == 0) {
-          return true;
-        }
-        return false;
+        return (num%testNum == 0)
       }
     </script>
   </head>
