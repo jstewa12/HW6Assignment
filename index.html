@@ -2,7 +2,8 @@
 <head>
   <title>Lottery</title>
   <script type="text/javascript"> 
-    function compare(array) {
+    function compare(array) 
+    {
       numbers = document.getElementById("numbers").value;
       var nums2 = [0, 0, 0, 0, 0, 0];
       j = 0;
@@ -30,10 +31,12 @@
       alert("Number of Matches: " + matches);
       luckyball = 0;
       nums2[0] = arguments[0] ? luckyBall = 1 : luckyball = 0;
+      alert("About to call payout function");
       payout(matches, luckyBall);
     }
     
-    function payout(matches, luckyBall) {
+    function payout(matches, luckyBall) 
+    {
       document.write("You've won ");
       switch(luckyBall == 1) {
           case 0;
