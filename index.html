@@ -2,39 +2,6 @@
 <head>
   <title>Lottery</title>
   <script type="text/javascript"> 
-    function compare(array) 
-    {
-      numbers = document.getElementById("numbers").value;
-      var nums2 = [0, 0, 0, 0, 0, 0];
-      j = 0;
-      for (i = 0; i < 5; i++) {
-        num = numbers[j];
-        if (numbers[j + 1] != " ") {
-          num += numbers[j + 1];
-        }
-        numbers[j + 1] == " " ? j += 2 : j += 3;
-        nums[i] = parseInt(num);
-        alert("Entered Number " + i + ": " + nums[i]);
-      }
-      lucky = parseInt(document.getElementById("lucky").value);
-      alert("Entered Lucky Number: " + lucky);
-      
-      matches = 0;
-      for (i = 1; i < 6; i++) {
-        for (j = 1; j < 6; j++) {
-          if (nums[i] == arguments[j]) {
-            matches++;
-          }
-        }
-      }
-      
-      alert("Number of Matches: " + matches);
-      luckyball = 0;
-      nums2[0] = arguments[0] ? luckyBall = 1 : luckyball = 0;
-      alert("About to call payout function");
-      payout(matches, luckyBall);
-    }
-    
     function payout(matches, luckyBall) 
     {
       switch(luckyBall == 1) {
@@ -91,6 +58,36 @@
             break;
       }
     }
+    
+    numbers = document.getElementById("numbers").value;
+    var nums2 = [0, 0, 0, 0, 0, 0];
+    j = 0;
+    for (i = 0; i < 5; i++) {
+      num = numbers[j];
+      if (numbers[j + 1] != " ") {
+        num += numbers[j + 1];
+      }
+      numbers[j + 1] == " " ? j += 2 : j += 3;
+      nums[i] = parseInt(num);
+      alert("Entered Number " + i + ": " + nums[i]);
+    }
+    lucky = parseInt(document.getElementById("lucky").value);
+    alert("Entered Lucky Number: " + lucky);
+      
+    matches = 0;
+    for (i = 1; i < 6; i++) {
+      for (j = 1; j < 6; j++) {
+        if (nums[i] == arguments[j]) {
+          matches++;
+        }
+      }
+    }
+      
+    alert("Number of Matches: " + matches);
+    luckyball = 0;
+    nums2[0] = arguments[0] ? luckyBall = 1 : luckyball = 0;
+    alert("About to call payout function");
+    payout(matches, luckyBall);
    </script>
 </head>
 <body>
