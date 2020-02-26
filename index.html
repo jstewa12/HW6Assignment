@@ -55,26 +55,27 @@
     }
     
     function compare(array) {
-      numbers = document.getElementById("numbers").value;
-      var nums2 = [0, 0, 0, 0, 0];
+      guesses = document.getElementById("guesses").value;
+      var nums = [0, 0, 0, 0, 0];
+      temp = 0;
       j = 0;
       for (i = 0; i < 5; i++) {
-        num = numbers[j];
-        if (numbers[j + 1] != " ") {
-          num += numbers[j + 1];
+        temp = guesses[j];
+        if (guesses[j + 1] != " ") {
+          temp += guesses[j + 1];
         }
-        numbers[j + 1] == " " ? j += 2 : j += 3;
-        nums2[i] = parseInt(num);
-        alert("Entered Number: " + nums2[i]);
+        guesses[j + 1] == " " ? j += 2 : j += 3;
+        nums[i] = parseInt(temp);
       }
       lucky = parseInt(document.getElementById("lucky").value);
-      alert("Entered Lucky Number: " + lucky);
       
       matches = 0;
-      for (i = 0; i < 5; i++) {
-        for (j = 1; j < 6; j++) {
-          if (nums2[i] == array[j]) {
+      for (k = 0; k < 5; k++) {
+        for (m = 1; m < 6; m++) {
+          if (nums[k] == array[m]) {
             matches++;
+            alert("Entered number " + i + ": " + nums[i]);
+            alert("Matching number: " + array[m]);
             alert("You got a match!");
           }
         }
@@ -82,36 +83,36 @@
       
       alert("Matches: " + matches);
       luckyball = 0;
-      lucky = array[0] ? luckyBall = 1 : luckyball = 0;
+      lucky == array[0] ? luckyBall = 1 : luckyball = 0;
       payout(matches, luckyBall);
     }
    </script>
 </head>
 <body>
   <script type="text/javascript">
-    var nums = [0, 0, 0, 0, 0, 0];
+    var lotteryNums = [0, 0, 0, 0, 0, 0];
     j = 1;
     for (i = 0; i < 5; i++) {
-      nums[i] = parseInt(Math.random() * 48 + 1);
-      alert("Random Number " + j + ": " + nums[i]);
+      lotteryNums[i] = parseInt(Math.random() * 48 + 1);
+      alert("Lottery Number " + j + ": " + lotteryNums[i]);
       j++;
     }  
-    lucky = parseInt(Math.random() * 18 + 1);
-    alert("Lucky number: " + lucky);
+    lotteryLucky = parseInt(Math.random() * 18 + 1);
+    alert("Lucky number: " + lotteryLucky);
     
-    nums.sort(function(a, b){return a - b});
-    nums[0] = lucky;
+    lotteryNums.sort(function(a, b){return a - b});
+    lotteryNums[0] = lucky;
     j = 1;
     for (i = 1; i < 6; i++) {
-      alert("Sorted Number " + j + ": " + nums[i]);
+      alert("Sorted Lottery Number " + j + ": " + lotteryNums[i]);
       j++;
     }
-    alert("Lucky number: " + nums[0]);
+    alert("Lucky number: " + lotteryNums[0]);
   </script>
   <form>
-    <input type='text' id='numbers' display:block>
+    <input type='text' id='guesses' display:block>
     <input type='text' id='lucky' display:block>
-    <input type='button' value="Compare to Winning Numbers" onclick="compare(nums)">
+    <input type='button' value="Did you win?" onclick="compare(lotteryNums)">
   </form>
 </body>
 </html>
