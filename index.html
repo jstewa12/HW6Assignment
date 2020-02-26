@@ -25,7 +25,7 @@
           matches = 1;
           alert("You've won $6!");
           break;
-        case 5:
+        default:
           matches = 0;
           alert("You've won $4!");
           break;
@@ -76,6 +76,7 @@
         }
       }
       
+      alert("Matches: " + matches);
       luckyball = 0;
       nums2[0] = arguments[0] ? luckyBall = 1 : luckyball = 0;
       payout(matches, luckyBall);
