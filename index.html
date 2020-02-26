@@ -5,52 +5,45 @@
     function payout(matches, luckyBall) 
     {
       alert("Luckyball Value: " + luckyBall);
-      switch(luckyBall == 1) {
-        case 0:
-          matches = 5;
-          alert("You've won $7,000 a WEEK for LIFE!");
-          break;
-        case 1:
-          matches = 4;
-          alert("You've won $5,000!");
-          break;
-        case 2:
-          matches = 3;
-          alert("You've won $150!");
-          break;
-        case 3:
-          matches = 2;
-          alert("You've won $25!");
-          break;
-        case 4:
-          matches = 1;
-          alert("You've won $6!");
-          break;
-        default:
-          matches = 0;
-          alert("You've won $4!");
-          break;
-      }
-          
-      switch(luckyBall == 0) {
-        case 0:
-          matches = 5;
-          alert("You've won $25,000 a YEAR for LIFE!");
-          break;
-        case 1:
-          matches = 4;
-          alert("You've won $200!");
-          break;
-        case 2:
-          matches = 3;
-          alert("You've won $20!");
-          break;
-        case 3:
-          matches = 2;
-          alert("You've won $3!");
-          break;
-        default: 
-          alert("You've won nothing! Sorry :(");
+      if (luckyBall == 1) {
+        switch(matches) {
+          case 5:
+            alert("You've won $7,000 a WEEK for LIFE!");
+            break;
+          case 4:
+            alert("You've won $5,000!");
+            break;
+          case 3:
+            alert("You've won $150!");
+            break;
+          case 2:
+            alert("You've won $25!");
+            break;
+          case 1:
+            alert("You've won $6!");
+            break;
+          default:
+            alert("You've won $4!");
+            break;
+        }
+      } else {
+        switch(matches) {
+          case 5:
+            alert("You've won $25,000 a YEAR for LIFE!");
+            break;
+          case 4:
+            alert("You've won $200!");
+            break;
+          case 3:
+            alert("You've won $20!");
+            break;
+          case 2:
+            alert("You've won $3!");
+            break;
+          default: 
+            alert("You've won nothing! Sorry :(");
+            break;
+        }
       }
     }
     
