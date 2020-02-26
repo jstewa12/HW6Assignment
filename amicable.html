@@ -39,18 +39,28 @@
 //      var test3 = ["Cat", "Dog", "Rabbit", "Snake", "Hamster", "Parrot", "Yeti"];
 //      showFactors(test3);
 //    }
-
-    function aftest1()
+//
+//    function aftest1()
+//    {
+//      var test1 = [1, 2, 3, 4, 5, 6];
+//      addFactors(test1);
+//      alert("Sum: " + addFactors(test1));
+//    }
+//    
+//    function aftest2()
+//    {
+//      var test2 = ["Dog", "Cat", "Rabbit", "Snake"];
+//      alert("Sum: " + addFactors(test2));
+//    }
+    
+    function gftest1()
     {
-      var test1 = [1, 2, 3, 4, 5, 6];
-      addFactors(test1);
-      alert("Sum: " + addFactors(test1));
+      
     }
     
-    function aftest2()
+    function gftest2()
     {
-      var test2 = ["Dog", "Cat", "Rabbit", "Snake"];
-      alert("Sum: " + addFactors(test2));
+      
     }
     
     function isFactor(num, testNum) 
@@ -74,6 +84,19 @@
         sum += arguments[i];
       }
       return sum;
+    }
+    
+    function getFactors(number)
+    {
+      var factors[number];
+      j = 0;
+      for (i = 0; i < number; i++) {
+        if (number%i == 0) {
+          factors[j] = i;
+          j++;
+        }
+      }
+      return factors;
     }
     
   </script>
