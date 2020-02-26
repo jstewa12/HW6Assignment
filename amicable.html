@@ -39,7 +39,25 @@
 //      var test3 = ["Cat", "Dog", "Rabbit", "Snake", "Hamster", "Parrot", "Yeti"];
 //      showFactors(test3);
 //    }
-//    
+    
+    function aftest1()
+    {
+      var test1 = [1, 2, 3, 4, 5, 6];
+      addFactors(test1);
+    }
+    
+    function aftest2()
+    {
+      var test2 = ["Dog", "Cat", "Rabbit", "Snake"];
+      addFactors(test2);
+    }
+    
+    function isFactor(num, testNum) 
+    {
+      alert("Called isFactor");
+      return (num%testNum == 0);
+    }
+
     function showFactors(arguments)
     {
       alert("Called showFactors()");
@@ -47,12 +65,16 @@
         alert(arguments[i]);
       }
    }
-    
-    function isFactor(num, testNum) 
+
+    function addFactors(arguments)
     {
-      alert("Called isFactor");
-      return (num%testNum == 0);
+      sum = 0;
+      for (i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+      }
+      alert("Sum: " + sum);
     }
+    
   </script>
 </head>
 <body>
@@ -60,9 +82,8 @@
     <input type='text' id='number1'>
     <input type='text' id='number2'>
     <input type='button' value="Are they amicable?" onclick="compare()">
-    <input type='button' value="showFactors Test 1" onclick="sftest1()">
-    <input type='button' value="showFactors Test 2" onclick="sftest2()">
-    <input type='button' value="showFactors Test 3" onclick="sftest3()">
+    <input type='button' value="showFactors Test 1" onclick="aftest1()">
+    <input type='button' value="showFactors Test 2" onclick="aftest2()">
   </form>
 </body>
 </html>
