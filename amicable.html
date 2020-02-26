@@ -39,17 +39,18 @@
 //      var test3 = ["Cat", "Dog", "Rabbit", "Snake", "Hamster", "Parrot", "Yeti"];
 //      showFactors(test3);
 //    }
-    
+/    
     function aftest1()
     {
       var test1 = [1, 2, 3, 4, 5, 6];
       addFactors(test1);
+      alert("Sum: " + addFactors(test1));
     }
     
     function aftest2()
     {
       var test2 = ["Dog", "Cat", "Rabbit", "Snake"];
-      addFactors(test2);
+      alert("Sum: " + addFactors(test2));
     }
     
     function isFactor(num, testNum) 
@@ -72,7 +73,7 @@
       for (i = 0; i < arguments.length; i++) {
         sum += arguments[i];
       }
-      alert("Sum: " + sum);
+      return sum;
     }
     
   </script>
