@@ -10,16 +10,41 @@
       isFactor();
     }
     
-    function iftest1() 
+//    function iftest1() 
+//    {
+//      alert("Called iftest1()");
+//      isFactor(6, 3) ? alert("Correct!") : alert("Incorrect!");
+//   }
+//    
+//    function iftest2() 
+//    {
+//      alert("Called iftest2()");
+//      isFactor(5, 3) ? alert("Correct!") : alert("Incorrect!");
+//    }
+    
+    function sftest1()
     {
-      alert("Called iftest1()");
-      isFactor(6, 3) ? alert("Correct!") : alert("Incorrect!");
+      var test1 = [12, 14, 15, 16, 17];
+      showFactors(test1);
+    }
+
+    function sftest2()
+    {
+      var test2 = ["Dog"];
+      showFactors(test2);
     }
     
-    function iftest2() 
+    function sftest3()
     {
-      alert("Called iftest2()");
-      isFactor(5, 3) ? alert("Correct!") : alert("Incorrect!");
+      var test3 = ["Cat", "Dog", "Rabbit", "Snake", "Hamster", "Parrot", "Yeti"];
+      showFactors(test3);
+    
+    function showFactors(array)
+    {
+      alert("Called showFactors()");
+      for (i = 0; i < array.len; i++) {
+        alert(array[i]);
+      }
     }
     
     function isFactor(num, testNum) 
@@ -34,8 +59,9 @@
     <input type='text' id='number1'>
     <input type='text' id='number2'>
     <input type='button' value="Are they amicable?" onclick="compare()">
-    <input type='button' value="isFactor Test 1" onclick="iftest1()">
-    <input type='button' value="isFactor Test 2" onclick="iftest2()">
+    <input type='button' value="isFactor Test 1" onclick="sftest1()">
+    <input type='button' value="isFactor Test 2" onclick="sftest2()">
+    <input type='button' value="isFactor Test 2" onclick="sftest3()">
   </form>
 </body>
 </html>
