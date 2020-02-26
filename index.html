@@ -4,6 +4,7 @@
   <script type="text/javascript"> 
     function payout(matches, luckyBall) 
     {
+      alert("Luckyball Value: " + luckyBall);
       switch(luckyBall == 1) {
         case 0:
           matches = 5;
@@ -64,8 +65,10 @@
         }
         numbers[j + 1] == " " ? j += 2 : j += 3;
         nums2[i] = parseInt(num);
+        alert("Entered Number: " + nums2[i]);
       }
       lucky = parseInt(document.getElementById("lucky").value);
+      alert("Entered Lucky Number: " + lucky);
       
       matches = 0;
       for (i = 1; i < 6; i++) {
