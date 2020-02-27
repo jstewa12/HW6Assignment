@@ -76,7 +76,11 @@
     
     function isFactor(num, testNum) 
     {
-      return ((num%testNum) == 0);
+      remainder = num%testNum;
+      if (remainder == 0) {
+        return true;
+      }
+      return false;
     }
 
     function showFactors(arguments)
