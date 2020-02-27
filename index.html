@@ -60,6 +60,7 @@
         guessString[j + 1] == " " ? j += 2 : j += 3;
         guesses[i] = parseInt(tempString);
       }
+      
       luckyGuess = parseInt(document.getElementById("lucky").value);
       
       matches = 0;
@@ -67,8 +68,6 @@
         for (j = 1; j < 6; j++) {
           if (guesses[i] == arguments[j]) {
             matches++;
-            alert("Entered number " + i + ": " + guesses[i]);
-            alert("Matching number: " + arguments[j]);
             alert("You got a match!");
           }
         }
