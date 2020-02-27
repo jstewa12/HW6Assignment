@@ -76,7 +76,9 @@
       
       alert("Matches: " + matches);
       luckyball = 0;
-      lucky == array[0] ? luckyBall = 1 : luckyball = 0;
+      if (lucky == array[0]) {
+        luckyball = 1;
+      }
       payout(matches, luckyBall);
     }
    </script>
