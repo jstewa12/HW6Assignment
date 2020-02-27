@@ -102,8 +102,9 @@
     function getFactors(number)
     {
       var factors = new Array(1);
+      factors[0] = 1;
       j = 0;
-      for (i = 1; i < (number + 1); i++) {
+      for (i = 2; i < (number + 1); i++) {
         if (isFactor(number, i)) {
           factors.push(i);
           alert("Factors New: " + factors[j]);
