@@ -48,36 +48,36 @@
     }
     
     function compare(arguments) {
-      guesses = document.getElementById("guesses").value;
-      var nums = [0, 0, 0, 0, 0];
-      temp = "";
+      guessString = document.getElementById("guesses").value;
+      var guesses = [0, 0, 0, 0, 0];
+      tempString = "";
       j = 0;
       for (i = 0; i < 5; i++) {
-        temp = guesses[j];
-        if (guesses[j + 1] != " ") {
-          temp += guesses[j + 1];
+        tempString = guessString[j];
+        if (guessString[j + 1] != " ") {
+          tempString += guessString[j + 1];
         }
-        guesses[j + 1] == " " ? j += 2 : j += 3;
-        nums[i] = parseInt(temp);
+        guessString[j + 1] == " " ? j += 2 : j += 3;
+        guesses[i] = parseInt(tempString);
       }
-      lucky = parseInt(document.getElementById("lucky").value);
+      luckyGuess = parseInt(document.getElementById("lucky").value);
       
       matches = 0;
-      for (k = 0; k < 5; k++) {
-        for (m = 1; m < 6; m++) {
-          if (nums[k] == arguments[m]) {
+      for (i = 0; i < 5; i++) {
+        for (j = 1; j < 6; j++) {
+          if (guesses[i] == arguments[j]) {
             matches++;
-            alert("Entered number " + i + ": " + nums[k]);
-            alert("Matching number: " + arguments[m]);
+            alert("Entered number " + i + ": " + guesses[i]);
+            alert("Matching number: " + arguments[j]);
             alert("You got a match!");
           }
         }
       }
       
       alert("Matches: " + matches);
-      luckyball = 0;
-      if (lucky == arguments[0]) {
-        luckyball = 1;
+      luckyBall = 0;
+      if (luckyGuess == arguments[0]) {
+        luckyBall = 1;
       }
       payout(matches, luckyBall);
     }
