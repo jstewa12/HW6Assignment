@@ -47,7 +47,7 @@
       }
     }
     
-    function compare(array) {
+    function compare(arguments) {
       guesses = document.getElementById("guesses").value;
       var nums = [0, 0, 0, 0, 0];
       temp = "";
@@ -65,10 +65,10 @@
       matches = 0;
       for (k = 0; k < 5; k++) {
         for (m = 1; m < 6; m++) {
-          if (nums[k] == array[m]) {
+          if (nums[k] == arguments[m]) {
             matches++;
             alert("Entered number " + i + ": " + nums[k]);
-            alert("Matching number: " + array[m]);
+            alert("Matching number: " + arguments[m]);
             alert("You got a match!");
           }
         }
@@ -76,7 +76,7 @@
       
       alert("Matches: " + matches);
       luckyball = 0;
-      if (lucky == array[0]) {
+      if (lucky == arguments[0]) {
         luckyball = 1;
       }
       payout(matches, luckyBall);
