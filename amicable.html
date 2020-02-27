@@ -5,13 +5,10 @@
     {
       num1 = document.getElementById("number1").value;
       num2 = document.getElementById("number2").value;
-      alert("Number 1: " + num1);
-      alert("Number 2: " + num2);
       var num1Factors = getFactors(num1);
       var num2Factors = getFactors(num2);
       num1FactorSum = addFactors(num1Factors);
       num2FactorSum = addFactors(num2Factors);
-      alert("Sum of Number 1 Factors: " + num1FactorSum + "<div>Sum of Number 2 Factors: " + num2FactorSum);
       num1FactorSum == num2FactorSum ? alert("Amicable!") : alert("Not amicable!");
     }
     
@@ -107,7 +104,6 @@
       for (i = 2; i < (number + 1); i++) {
         if (isFactor(number, i)) {
           factors.push(i);
-          alert("Factors New: " + factors[j]);
           j++;
         }
       }
