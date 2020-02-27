@@ -7,7 +7,11 @@
       num2 = document.getElementById("number2").value;
       alert("Number 1: " + num1);
       alert("Number 2: " + num2);
-      isFactor();
+      var num1Factors = getFactors(num1);
+      var num2Factors = getFactors(num2);
+      num1FactorSum = addFactors(num1Factors);
+      num2FactorSum = addFactors(num2Factors);
+      num1FactorSum == num2FactorSum ? alert("Amicable!") : alert("Amicable!");
     }
     
 //    function iftest1() 
@@ -52,22 +56,22 @@
 //      var test2 = ["Dog", "Cat", "Rabbit", "Snake"];
 //      alert("Sum: " + addFactors(test2));
 //    }
-    
-    function gftest1()
-    {
-      var factors = getFactors(6);
-      for (i = 0; i < factors.length; i++) {
-        alert("Test 1 Factorof6: " + factors[i]);
-      }
-    }
-    
-    function gftest2()
-    {
-      var factors = getFactors(20);
-      for (i = 0; i < factors.length; i++) {
-        alert("Test 1 Factorof6: " + factors[i]);
-      }
-    }
+//    
+//    function gftest1()
+//    {
+//      var factors = getFactors(6);
+//      for (i = 0; i < factors.length; i++) {
+//        alert("Test 1 Factorof6: " + factors[i]);
+//      }
+//    }
+//    
+//    function gftest2()
+//    {
+//      var factors = getFactors(20);
+//      for (i = 0; i < factors.length; i++) {
+//        alert("Test 1 Factorof6: " + factors[i]);
+//      }
+//    }
     
     function isFactor(num, testNum) 
     {
@@ -97,7 +101,7 @@
       var factors = [1];
       j = 0;
       for (i = 2; i < number + 1; i++) {
-        if (number%i == 0) {
+        if (isFactor(number, i) == 0) {
           factors.push(i);
         }
       }
@@ -111,8 +115,15 @@
     <input type='text' id='number1'>
     <input type='text' id='number2'>
     <input type='button' value="Are they amicable?" onclick="compare()">
+<!--    <input type='button' value="getFactors Test 1" onclick="iftest1()">
+    <input type='button' value="getFactors Test 2" onclick="iftest2()">
+    <input type='button' value="getFactors Test 1" onclick="sftest1()">
+    <input type='button' value="getFactors Test 2" onclick="sftest2()">
+    <input type='button' value="getFactors Test 2" onclick="sftest3()">
+    <input type='button' value="getFactors Test 1" onclick="aftest1()">
+    <input type='button' value="getFactors Test 2" onclick="aftest2()">
     <input type='button' value="getFactors Test 1" onclick="gftest1()">
-    <input type='button' value="getFactors Test 2" onclick="gftest2()">
+    <input type='button' value="getFactors Test 2" onclick="gftest2()"> -->
   </form>
 </body>
 </html>
