@@ -11,7 +11,7 @@
       var num2Factors = getFactors(num2);
       num1FactorSum = addFactors(num1Factors);
       num2FactorSum = addFactors(num2Factors);
-      num1FactorSum == num2FactorSum ? alert("Amicable!") : alert("Amicable!");
+      num1FactorSum == num2FactorSum ? alert("Amicable!") : alert("Not amicable!");
     }
     
 //    function iftest1() 
@@ -99,7 +99,7 @@
       alert("Number Print 2: " + number);
       var factors = new Array(1);
       j = 0;
-      for (i = 2; i < (number + 1); i++) {
+      for (i = 1; i < (number + 1); i++) {
         if (isFactor(number, i)) {
           alert("Factors: " + i);
           factors.push(i);
