@@ -68,12 +68,10 @@
         for (j = 1; j < 6; j++) {
           if (guesses[i] == arguments[j]) {
             matches++;
-            alert("You got a match!");
           }
         }
       }
       
-      alert("Matches: " + matches);
       luckyBall = 0;
       if (luckyGuess == arguments[0]) {
         luckyBall = 1;
@@ -95,7 +93,6 @@
     alert("Lucky number: " + lotteryLucky);
     
     lotteryNums.sort(function(a, b){return a - b});
-    alert("Sorted!");
     lotteryNums[0] = lotteryLucky;
     j = 1;
     for (i = 1; i < 6; i++) {
