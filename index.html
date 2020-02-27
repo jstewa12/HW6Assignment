@@ -86,11 +86,11 @@
     j = 1;
     for (i = 0; i < 5; i++) {
       lotteryNums[i] = parseInt(Math.random() * 48 + 1);
-      for (j = 0; j < 5; j++) {
-        if (lotteryNums[i] == lotteryNums[j]) {
-          if (i != j) {
+      for (k = 0; k < 5; k++) {
+        if (lotteryNums[i] == lotteryNums[k]) {
+          if (i != k) {
             lotteryNums[i] = parseInt(Math.random() * 48 + 1);
-            j = 0;
+            k = 0;
           }
         }
       }
